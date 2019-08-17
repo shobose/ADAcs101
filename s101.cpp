@@ -1,14 +1,19 @@
 #include<stdio.h>
 
 #include<bits/stdc++.h>
+#include<time.h>
 using namespace std;
 
 
 int main()
+
 {
 	 int n,s=1;
 	 cout<<"enter no";
 	 cin>>n;
+	 
+	 clock_t start,end,t;
+     start = clock();
 	 int x=0,y=n/2,mid;
 	 while(x<=y)
 	 {
@@ -29,8 +34,9 @@ int main()
 	      cout<<x-1;
 		  else
 			  cout<<s;
-		  return 0;
-		  
-		  
-		  
-}		
+			  t=start-end;
+			  printf(" time is %f sec \n",t,((float)t)/CLOCKS_PER_SEC);
+			  
+		  return 0;	
+
+}	
